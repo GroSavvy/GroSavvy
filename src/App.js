@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useData } from "./data/dataProvider";
 
 function App() {
+  const { items, stores } = useData();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {items.map((item) => {
+        return (
+          <div>
+            {item.name}
+            <br />
+            {item.keyWords}
+          </div>
+        );
+      })}
+      {stores.map((store) => {
+        return (
+          <div>
+            {store.brand}
+            <br />
+            {store.location}
+          </div>
+        );
+      })}
     </div>
   );
 }
