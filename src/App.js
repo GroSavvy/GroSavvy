@@ -1,30 +1,14 @@
 import "./App.css";
 import { useData } from "./data/dataProvider";
+import { useEffect } from "react";
 
 function App() {
-  const { items, stores } = useData();
-  return (
-    <div className="App">
-      {items.map((item) => {
-        return (
-          <div>
-            {item.name}
-            <br />
-            {item.keyWords}
-          </div>
-        );
-      })}
-      {stores.map((store) => {
-        return (
-          <div>
-            {store.brand}
-            <br />
-            {store.location}
-          </div>
-        );
-      })}
-    </div>
-  );
+  const { items, stores, currentLists, createNewList } = useData();
+  console.log(items);
+  console.log(stores);
+  useEffect(()=>createNewList([{ a: 1, b: 2 }]), []);
+  console.log(currentLists);
+  return <div className="App"></div>;
 }
 
 export default App;
