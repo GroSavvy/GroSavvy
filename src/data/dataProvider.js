@@ -16,7 +16,7 @@ export function DataProvider({ children }) {
   const getStoresByName = (name) =>
     stores.filter((store) => store.brand.includes(name));
 
-  const createNewList = (list = []) => setLists([...currentLists, list]);
+  const createNewList = (list) => setLists([...currentLists, list]);
 
   return (
     <DataContext.Provider
