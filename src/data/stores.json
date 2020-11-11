@@ -9,6 +9,12 @@
     "id": 2,
     "brand": "fortinos",
     "location": "50 dundurn street south unit b",
-    "distanceToMac":"4.5"
+    "distanceToMac": "4.5"
+  },
+  {
+    "id": 3,
+    "brand": "foodbasics",
+    "location": "845 king street west",
+    "distanceToMac": "2.5"
   }
 ]

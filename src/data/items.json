@@ -1,37 +1,50 @@
 [
-    {
-      "id": 1,
-      "name": "coca cola large",
-      "keyWords": "coke coca cola",
-      "metric": "unit",
-      "price": "3.60"
-    },
-    {
-      "id": 2,
-      "name": "baking potato",
-      "keyWords": "baking potato",
-      "metric": "weight",
-      "price": "1.00"
-    },
-    {
-      "id": 3,
-      "name": "paper towel",
-      "keyWords": "paper towel",
-      "metric": "unit",
-      "price": "9.50"
-    },
-    {
-      "id": 4,
-      "name": "lays potato chips small",
-      "keyWords": "lays potato chips crisp",
-      "metric": "unit",
-      "price": "2.00"
-    },
-    {
-      "id": 5,
-      "name": "strawberry",
-      "keyWords": "strawberry fruit",
-      "metric": "weight",
-      "price": "2.50"
-    }
-  ]
+  {
+    "id": 1,
+    "name": "coca cola large",
+    "keyWords": "coke coca cola",
+    "metric": "unit",
+    "price": "3.60",
+    "storeId": 1
+  },
+  {
+    "id": 6,
+    "name": "coca cola large",
+    "keyWords": "coke coca cola",
+    "metric": "unit",
+    "price": "3.70",
+    "storeId": 2
+  },
+  {
+    "id": 2,
+    "name": "baking potato",
+    "keyWords": "baking potato",
+    "metric": "weight",
+    "price": "1.00",
+    "storeId": 1
+  },
+  {
+    "id": 3,
+    "name": "paper towel",
+    "keyWords": "paper towel",
+    "metric": "unit",
+    "price": "9.50",
+    "storeId": 1
+  },
+  {
+    "id": 4,
+    "name": "lays potato chips small",
+    "keyWords": "lays potato chips crisp",
+    "metric": "unit",
+    "price": "2.00",
+    "storeId": 2
+  },
+  {
+    "id": 5,
+    "name": "strawberry",
+    "keyWords": "strawberry fruit",
+    "metric": "weight",
+    "price": "2.50",
+    "storeId": 3
+  }
+]

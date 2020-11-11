@@ -1,14 +1,25 @@
 import "./App.css";
-import { useData } from "./data/dataProvider";
-import { useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.css";
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import Home from "./pages/Home";
+import PriceMatch from "./pages/PriceMatch";
+import ShoppingList from "./pages/ShoppingList";
+import MyLists from "./pages/MyLists";
 
 function App() {
-  const { items, stores, currentLists, createNewList } = useData();
-  console.log(items);
-  console.log(stores);
-  useEffect(()=>createNewList([{ a: 1, b: 2 }]), []);
-  console.log(currentLists);
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="home" element={<Home />} />
+        <Route path="pricematch" element={<PriceMatch />} />
+        <Route path="shoppinglist" element={<ShoppingList />} />
+        <Route path="mylists" element={<MyLists />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;

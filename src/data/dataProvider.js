@@ -6,16 +6,15 @@ const DataContext = createContext();
 export const useData = () => useContext(DataContext);
 
 export function DataProvider({ children }) {
-  const [items, setItems] = useState(itemsRawData);
-  const [stores, setStores] = useState(storesRawData);
+  const [items] = useState(itemsRawData);
+  const [stores] = useState(storesRawData);
   const [currentLists, setLists] = useState([]);
 
   const getItemsByKeyWord = (word) =>
-    items.items.filter((item) => item.keyWords.includes(word));
+    items.filter((item) => item.keyWords.includes(word));
 
   const getStoresByName = (name) =>
     stores.filter((store) => store.brand.includes(name));
-
 
   const createNewList = (list = []) => setLists([...currentLists, list]);
 
