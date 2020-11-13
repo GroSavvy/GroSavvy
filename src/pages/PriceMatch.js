@@ -15,10 +15,10 @@ export default function PriceMatch() {
     () =>
       item &&
       item.stockInfo.map((info) => {
-        const storeId = Object.keys(info)[0];
-        const price = Object.values(info)[0];
+        const storeId = info["store_id"];
+        const price = info["price"];
         const store = stores.filter(
-          (store) => store.id.toString() === storeId
+          (store) => store.id.toString() === storeId.toString()
         )[0];
         return { ...store, price };
       }),
