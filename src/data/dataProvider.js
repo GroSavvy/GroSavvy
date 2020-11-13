@@ -25,8 +25,8 @@ export function DataProvider({ children }) {
     saveJSON("myLists", [...myLists, list]);
   };
   const clearMyLists = () => {
-    setMyLists([])
-    clearLocalStorage("myLists")
+    setMyLists([]);
+    clearLocalStorage("myLists");
   };
 
   return (
@@ -38,7 +38,7 @@ export function DataProvider({ children }) {
         getStoresByName,
         myLists,
         addNewList,
-        clearMyLists
+        clearMyLists,
       }}
     >
       {children}

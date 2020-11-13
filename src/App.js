@@ -9,7 +9,6 @@ import MyLists from "./pages/MyLists";
 import { useData } from "./data/dataProvider";
 
 function App() {
-  
   const { myLists, addNewList, clearMyLists } = useData();
   const submit = (e) => {
     e.preventDefault();
@@ -34,7 +33,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="home" element={<Home />} />
-        <Route path="pricematch" element={<PriceMatch />} />
+        <Route path="pricematch" element={<PriceMatch />}/>
         <Route path="shoppinglist" element={<ShoppingList />} />
         <Route path="mylists" element={<MyLists />} />
       </Routes>
