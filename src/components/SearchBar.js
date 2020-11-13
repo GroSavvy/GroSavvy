@@ -4,7 +4,7 @@
 // export default function SearchBar() {
 //   const { data } = useData();
 //   const [input, setInput] = useState("");
-//   const categories = ["products", "competences", "services"];
+
 //   const sellingItems = categories
 //     .map((name) => data[name])
 //     .flat()

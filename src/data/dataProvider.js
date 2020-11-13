@@ -22,7 +22,7 @@ export function DataProvider({ children }) {
 
   const addNewList = (list) => {
     setMyLists([...myLists, list]);
-    saveJSON("myLists", myLists);
+    saveJSON("myLists", [...myLists, list]);
   };
   const clearMyLists = () => {
     setMyLists([])
