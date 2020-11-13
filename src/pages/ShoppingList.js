@@ -26,7 +26,7 @@ export default function ShoppingList() {
               <h1>{item.name.toUpperCase()}</h1>
               <h1>${getAvePrice(item.stockInfo)}/{item.metric}</h1>
               <form>
-                <label for="quantity">Quantity:</label>
+                <label htmlFor="quantity">Quantity:</label>
                 <input type="number" id="quantity" name="quantity" min="1" max="99" />
                 <input type="submit" value = "Add to cart" />
               </form>
