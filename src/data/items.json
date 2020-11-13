@@ -4,17 +4,7 @@
     "name": "coca cola large",
     "keyWords": "coke coca cola",
     "metric": "unit",
-    "price": "3.60",
-    "storeId": 1,
-    "img_src": "/images/cola.jpg"
-  },
-  {
-    "id": 6,
-    "name": "coca cola large",
-    "keyWords": "coke coca cola",
-    "metric": "unit",
-    "price": "3.70",
-    "storeId": 2,
+    "stockInfo": [{ "1": "3.60" }, { "2": "3.70" }],
     "img_src": "/images/cola.jpg"
   },
   {
@@ -22,8 +12,7 @@
     "name": "baking potato",
     "keyWords": "baking potato",
     "metric": "100g",
-    "price": "1.00",
-    "storeId": 1,
+    "stockInfo": [{ "1": "1.00" }],
     "img_src": "/images/baking_potato.jpg"
   },
   {
@@ -31,8 +20,7 @@
     "name": "toilet paper",
     "keyWords": "toilet washroom paper towel",
     "metric": "unit",
-    "price": "9.50",
-    "storeId": 1,
+    "stockInfo": [{ "1": "9.50" }],
     "img_src": "/images/toilet_paper.jpg"
   },
   {
@@ -40,8 +28,7 @@
     "name": "lays potato chips small",
     "keyWords": "lays potato chips crisp",
     "metric": "unit",
-    "price": "2.00",
-    "storeId": 2,
+    "stockInfo": [{ "2": "2.00" }],
     "img_src": "/images/chip.jpg"
   },
   {
@@ -49,8 +36,7 @@
     "name": "strawberry",
     "keyWords": "strawberry fruit",
     "metric": "100g",
-    "price": "2.50",
-    "storeId": 3,
+    "stockInfo": [{ "3": "2.50" }],
     "img_src": "/images/strawberry.jpg"
   }
 ]
