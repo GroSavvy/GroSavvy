@@ -2,21 +2,24 @@ import React, { useState } from "react";
 import { useData } from "../data/dataProvider";
 
 export default function ShoppingList() {
-  const { items, myLists, addNewList, clearMyLists, quantity } = useData();
-  const [list, setList] = useState({});
+  const { items, myLists, addNewList, clearMyLists } = useData();
+  const [ list, setList] = useState({});
 
-  const addItem = (e,a) => {
+
+  const addItem = (e) => {
     e.preventDefault();
-
-    // addNewList({product: e.target.value, quantity: 1});
-    console.log(a);
-    const key = `${e.target.value}`;
-    if (key in list) {
-      const updateList = Object.assign({}, list);
-      updateList[key] = updateList[key] + 1;
-      setList(updateList);
+    var a = parseInt(document.getElementById("quantity").value);
+    if (isNaN(a)) {
+      console.log("Error")
     } else {
-      setList({ ...list, [key]: 1 });
+      const key = `${e.target.value}`;
+      if (key in list) {
+        const updateList = Object.assign({}, list);
+        updateList[key] = updateList[key] + a;
+        setList(updateList);
+      } else {
+        setList({ ...list, [key]: a });
+      }
     }
   };
 
@@ -33,8 +36,6 @@ export default function ShoppingList() {
     var avg = sum / stockInfo.length;
     return avg;
   }
-
-  const a = 2;
 
   return (
     <div className="shoppinglist">
@@ -60,7 +61,7 @@ export default function ShoppingList() {
                 <button
                   type="submit"
                   value={item.name}
-                  onClick={(e) => addItem(e,a)}
+                  onClick={(e) => addItem(e)}
                 >
                   Add to Cart
                 </button>
