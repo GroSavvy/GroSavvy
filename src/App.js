@@ -28,7 +28,6 @@ function App() {
       <form onSubmit={delet}>
         <button>Delete</button>
       </form>
-
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />

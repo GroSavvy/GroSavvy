@@ -11,6 +11,7 @@ export default function NavBar() {
 
   const pathes = ["Home", "Shopping List", "Price Match", "My Lists"];
   return (
+    <div className ="banner">
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
@@ -36,5 +37,7 @@ export default function NavBar() {
         </ul>
       </div>
     </nav>
+    </div>
   );
+  
 }
