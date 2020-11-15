@@ -5,7 +5,7 @@ import { useState, useMemo } from "react";
 import { useData } from "../data/dataProvider";
 
 export default function PriceMatch() {
-  const { stores } = useData();
+  const { stores, items } = useData();
   const [item, setItem] = useState(null);
   const [sort, setSort] = useState();
 
@@ -34,13 +34,13 @@ export default function PriceMatch() {
   if (!item)
     return (
       <div>
-        <SearchBar onSearch={onSearch} />
+        <SearchBar items={items} onSearch={onSearch} />
       </div>
     );
   return (
     <div>
-      <SearchBar onSearch={onSearch} />
-        <Sort onSelected={setSort} />
+      <SearchBar items={items} onSearch={onSearch} />
+      <Sort onSelected={setSort} />
       <table class="table">
         <thead className="thead-dark">
           <tr>
