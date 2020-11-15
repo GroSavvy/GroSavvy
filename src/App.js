@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import PriceMatch from "./pages/PriceMatch";
 import ShoppingList from "./pages/ShoppingList";
 import MyLists from "./pages/MyLists";
+import ListCompare from "./pages/ListCompare";
 import { useData } from "./data/dataProvider";
 
 function App() {
@@ -32,8 +33,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="home" element={<Home />} />
-        <Route path="pricematch" element={<PriceMatch />}/>
+        <Route path="pricematch" element={<PriceMatch />} />
         <Route path="shoppinglist" element={<ShoppingList />} />
+        <Route path="listcompare/:id" element={<ListCompare />} />
         <Route path="mylists" element={<MyLists />} />
       </Routes>
     </div>
