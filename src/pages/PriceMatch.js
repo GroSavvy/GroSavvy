@@ -6,25 +6,30 @@ import { useData } from "../data/dataProvider";
 
 export default function PriceMatch() {
   const { stores } = useData();
-  const [item, setitem] = useState(null);
+  const [item, setItem] = useState(null);
+  const [sort, setSort] = useState();
+
   const onSearch = (item) => {
-    if (item) return setitem(item);
-    setitem(null);
+    if (item) return setItem(item);
+    setItem(null);
   };
 
-  const stocks = useMemo(
-    () =>
-      item &&
-      item.stockInfo.map((info) => {
-        const storeId = info["store_id"];
-        const price = info["price"];
-        const store = stores.filter(
-          (store) => store.id.toString() === storeId.toString()
-        )[0];
-        return { ...store, price };
-      }),
-    [item, stores]
-  );
+  const stocks = useMemo(() => {
+    if (item) {
+      return item.stockInfo
+        .map((info) => {
+          const storeId = info["store_id"];
+          const price = info["price"];
+          const store = stores.filter(
+            (store) => store.id.toString() === storeId.toString()
+          )[0];
+          return { ...store, price };
+        })
+        .sort((stock1, stock2) => {
+          return stock1[sort] - stock2[sort];
+        });
+    }
+  }, [item, stores, sort]);
 
   if (!item)
     return (
@@ -39,7 +44,7 @@ export default function PriceMatch() {
         <thead>
           <tr>
             <th>
-              <Sort />
+              <Sort onSelected={setSort} />
             </th>
             <th></th>
             <th></th>
