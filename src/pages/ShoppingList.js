@@ -6,9 +6,9 @@ export default function ShoppingList() {
   const [ list, setList] = useState({});
 
 
-  const addItem = (e) => {
+  const addItem = (e, item_id) => {
     e.preventDefault();
-    var a = parseInt(document.getElementById("quantity").value);
+    var a = parseInt(document.getElementById(item_id).value);
     if (isNaN(a)) {
       console.log("Error")
     } else {
@@ -53,7 +53,7 @@ export default function ShoppingList() {
                 <label htmlFor="quantity">Quantity:</label>
                 <input
                   type="number"
-                  id="quantity"
+                  id={item.id}
                   name="quantity"
                   min="1"
                   max="99"
@@ -61,7 +61,7 @@ export default function ShoppingList() {
                 <button
                   type="submit"
                   value={item.name}
-                  onClick={(e) => addItem(e)}
+                  onClick={(e) => addItem(e, item.id)}
                 >
                   Add to Cart
                 </button>
