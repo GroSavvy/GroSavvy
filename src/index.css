@@ -18,7 +18,17 @@ code {
   background-image: url('background.jpg');
   background-size: cover;
 }
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.main {
+  flex: 3 60rem;
+}
+.sidebar {
+  flex: 1 20rem;
+}
 
 /* products */
 .products {
@@ -37,7 +47,7 @@ code {
   padding: 1rem;
 }
 .product {
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
@@ -51,8 +61,19 @@ code {
   justify-content: space-between;
   align-items: center;
   font-size: 2rem;
+  margin: 0;
 }
 
 .product h2 {
   font-size: 1rem;
+  margin: 2rem;
+}
+
+.product button:hover {
+  opacity: 50%;
+}
+
+.cart {
+  padding: 1rem;
+  display: block;
 }
