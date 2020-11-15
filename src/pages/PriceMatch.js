@@ -40,16 +40,9 @@ export default function PriceMatch() {
   return (
     <div>
       <SearchBar onSearch={onSearch} />
-      <table>
-        <thead>
-          <tr>
-            <th>
-              <Sort onSelected={setSort} />
-            </th>
-            <th></th>
-            <th></th>
-            <th></th>
-          </tr>
+        <Sort onSelected={setSort} />
+      <table class="table">
+        <thead className="thead-dark">
           <tr>
             <th>Price</th>
             <th>Store</th>

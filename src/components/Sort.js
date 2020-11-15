@@ -12,18 +12,16 @@ export default function Sort({ onSelected = (f) => f }) {
     onSelected(options[e.target.value]);
   };
   return (
-    <form>
-      <label>
-        Sort
-        <br />
-        <select value={select} onChange={handleChange}>
+    <div className="sort">
+    <form className="sort-bar">
+        <select value={select} onChange={handleChange} className="custom-select">
           {Object.entries(options).map((opt, i) => (
             <option key={i} value={opt[0]}>
               {opt[0]}
             </option>
           ))}
         </select>
-      </label>
     </form>
+    </div>
   );
 }

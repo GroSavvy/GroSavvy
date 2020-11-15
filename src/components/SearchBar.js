@@ -17,7 +17,7 @@ export default function SearchBar({ onSearch = (f) => f }) {
     e.preventDefault();
     setInput("");
     setFilterDisplay([]);
-    onSearch("");
+    onSearch();
   };
 
   const onChangeInput = (e) => {
@@ -34,16 +34,18 @@ export default function SearchBar({ onSearch = (f) => f }) {
   };
 
   return (
-    <div>
-      <strong>Search </strong>
-      <form onSubmit={onClearInput}>
-        <input value={input} onChange={onChangeInput} />
-        <button type="submit">Clear</button>
+    <div className="input-box">
+      <form onSubmit={onClearInput} className="form-inline">
+        <input type="search" value={input} onChange={onChangeInput} className="form-control mr-sm-2" />
+        
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Clear</button>
       </form>
       {filterDisplay.map((key, i) => {
         return (
-          <div key={i}>
-            <strong onClick={(e) => onClickItem(e, key)}>{key.name}</strong>
+          <div className="search-output">
+          <ul key={i} className="list-group">
+            <li className="list-group-item list-group-item-action" onClick={(e) => onClickItem(e, key)}>{key.name}</li>
+          </ul>
           </div>
         );
       })}
