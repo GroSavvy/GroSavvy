@@ -1,14 +1,5 @@
 import { useData } from "../data/dataProvider";
 
-// [
-//   {
-//     "coca cola large": 2,
-//     "baking potato": 5,
-//     strawberry: 2,
-//     "lays potato chips small": 2,
-//   },
-// ];
-
 export default function useStoreOfList(listId) {
   const { myLists, stores, items } = useData();
 
@@ -37,9 +28,14 @@ export default function useStoreOfList(listId) {
         const storePrice = item["stockInfo"].filter(
           (info) => info["store_id"].toString() === storeInfo["id"].toString()
         )[0]["price"];
-        console.log(storePrice);
+        const itemTotalPrice = storePrice * count;
+        return { count, name, metric, img_src, storePrice, itemTotalPrice };
       });
+      const grandTotal = itemsInStore.reduce((acc, curr) => {
+        return acc + curr["itemTotalPrice"];
+      }, 0);
+      return { ...storeInfo, itemsInStore, grandTotal };
     });
 
-  return [];
+  return selectedStoresFullDetail;
 }

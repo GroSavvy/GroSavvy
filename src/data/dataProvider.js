@@ -14,7 +14,15 @@ export function DataProvider({ children }) {
   const [items] = useState(itemsRawData);
   const [stores] = useState(storesRawData);
 
-  const [listId, setListId] = useState(0);
+  const [listId, setListId] = useState(loadJSON("listId") || 0);
+  const bumpListId = () => {
+    setListId(listId + 1);
+    saveJSON("listId", listId + 1);
+  };
+  const zeroListId = () => {
+    setListId(0);
+    saveJSON("listId", 0);
+  };
 
   const getItemsByKeyWord = (word) =>
     items.filter((item) => item.keyWords.includes(word));
@@ -29,12 +37,13 @@ export function DataProvider({ children }) {
       ...myLists,
       { list, id: listId, time: date.toGMTString() },
     ]);
-    setListId(listId + 1);
+    bumpListId();
   };
 
   const clearMyLists = () => {
     setMyLists([]);
     clearLocalStorage("myLists");
+    zeroListId();
   };
 
   return (

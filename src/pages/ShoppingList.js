@@ -7,7 +7,7 @@ export default function ShoppingList() {
   const { items, addNewList } = useData();
   const [list, setList] = useState({});
   //
-  const [whatHaveI, setWhat] = useState("");
+  const [filterList, setfilterList] = useState(items);
   //
   let navigate = useNavigate();
 
@@ -53,18 +53,18 @@ export default function ShoppingList() {
     submit(e, list);
     navigate(`/mylists`);
   };
-  //
-  const selectedItem = whatHaveI["name"];
-  //
   return (
     <div className="content">
       <div className="main">
         {/*  */}
-        <SearchBar items={items} onSearch={(e) => setWhat(e)} />
-        <p>{JSON.stringify(whatHaveI["name"])}</p>
+        <SearchBar
+          onSearch={(e) => console.log(e)}
+          getFilterList={(e) => setfilterList(e)}
+        />
+        <div>{JSON.stringify(filterList)}</div>
         {/*  */}
         <ul className="products">
-          {items.map((item) => (
+          {filterList.map((item) => (
             <li key={item.id}>
               <div className="product">
                 <img

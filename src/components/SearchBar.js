@@ -1,6 +1,12 @@
 import React, { useState } from "react";
+import { useData } from "../data/dataProvider";
 
-export default function SearchBar({ items, onSearch = (f) => f }) {
+export default function SearchBar({
+  onSearch = (f) => f,
+  getFilterList = (f) => f,
+}) {
+  const { items } = useData();
+
   const [input, setInput] = useState("");
 
   const [filterDisplay, setFilterDisplay] = useState([]);
@@ -15,6 +21,7 @@ export default function SearchBar({ items, onSearch = (f) => f }) {
     e.preventDefault();
     setInput("");
     setFilterDisplay([]);
+    getFilterList(items);
     onSearch();
   };
 
@@ -26,8 +33,10 @@ export default function SearchBar({ items, onSearch = (f) => f }) {
         item.keyWords.includes(input.toLowerCase())
       );
       setFilterDisplay(newList);
+      getFilterList(newList);
     } else {
       setFilterDisplay([]);
+      getFilterList([]);
     }
   };
 

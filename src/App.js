@@ -1,6 +1,6 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route,Link } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import PriceMatch from "./pages/PriceMatch";
@@ -22,6 +22,7 @@ function App() {
 
   return (
     <div className="App">
+      {/*  */}
       <div>{JSON.stringify(myLists)}</div>
       <form onSubmit={submit}>
         <button>ADD</button>
@@ -29,6 +30,8 @@ function App() {
       <form onSubmit={delet}>
         <button>Delete</button>
       </form>
+      <Link to="/listcompare/0">To list compare 0</Link>
+      {/*  */}
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
