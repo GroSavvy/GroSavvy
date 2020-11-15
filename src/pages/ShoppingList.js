@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useData } from "../data/dataProvider";
 import { useNavigate } from "react-router-dom";
 
+
 export default function ShoppingList() {
   const { items, addNewList } = useData();
   const [list, setList] = useState({});
@@ -116,7 +117,7 @@ export default function ShoppingList() {
                 <button
                   type="submit"
                   className="btn btn-primary"
-                  onClick={e => submit(e, list)}
+                  onClick={handleChange}
                 >
                   Create List
                 </button>
