@@ -1,5 +1,6 @@
 import React from "react";
 import SearchBar from "../components/SearchBar";
+import Sort from "../components/Sort";
 import { useState, useMemo } from "react";
 import { useData } from "../data/dataProvider";
 
@@ -22,7 +23,7 @@ export default function PriceMatch() {
         )[0];
         return { ...store, price };
       }),
-    [item,stores]
+    [item, stores]
   );
 
   if (!item)
@@ -36,6 +37,14 @@ export default function PriceMatch() {
       <SearchBar onSearch={onSearch} />
       <table>
         <thead>
+          <tr>
+            <th>
+              <Sort />
+            </th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
           <tr>
             <th>Price</th>
             <th>Store</th>
