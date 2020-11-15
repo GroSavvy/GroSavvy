@@ -41,7 +41,7 @@ export default function PriceMatch() {
     <div>
       <SearchBar items={items} onSearch={onSearch} />
       <Sort onSelected={setSort} />
-      <table class="table">
+      <table className="table">
         <thead className="thead-dark">
           <tr>
             <th>Price</th>
