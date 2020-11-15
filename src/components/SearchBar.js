@@ -17,13 +17,13 @@ export default function SearchBar({ onSearch = (f) => f }) {
     e.preventDefault();
     setInput("");
     setFilterDisplay([]);
-    onSearch();
+    onSearch("");
   };
 
   const onChangeInput = (e) => {
-    if (e !== "") {
+    if (e !== undefined) {
       let newList = [];
-      setInput(e);
+      setInput(e.target.value);
       newList = items.filter((item) =>
         item.keyWords.includes(input.toLowerCase())
       );
@@ -32,11 +32,12 @@ export default function SearchBar({ onSearch = (f) => f }) {
       setFilterDisplay([]);
     }
   };
+
   return (
     <div>
       <strong>Search </strong>
       <form onSubmit={onClearInput}>
-        <input value={input} onChange={(e) => onChangeInput(e.target.value)} />
+        <input value={input} onChange={onChangeInput} />
         <button type="submit">Clear</button>
       </form>
       {filterDisplay.map((key, i) => {
