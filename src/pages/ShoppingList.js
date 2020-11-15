@@ -104,8 +104,8 @@ export default function ShoppingList() {
               </div>
               <div className="cart">
                 <ul className="list-group">
-                  {Object.keys(list).map(key => (
-                    <li className="list-group-item d-flex justify-content-between align-items-center">
+                  {Object.keys(list).map((key,i) => (
+                    <li key={i} className="list-group-item d-flex justify-content-between align-items-center">
                       {key}
                       <span className="badge badge-primary badge-pill">
                         {list[key]}
