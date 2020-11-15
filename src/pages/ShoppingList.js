@@ -7,11 +7,12 @@ export default function ShoppingList() {
   const [list, setList] = useState({});
   let navigate = useNavigate();
 
+
   const addItem = (e, item_id) => {
     e.preventDefault();
     var num = parseInt(document.getElementById(item_id).value);
     if (isNaN(num)) {
-      console.log("Error");
+      console.log("Error")
     } else {
       const key = `${e.target.value}`;
       if (key in list) {
@@ -59,11 +60,7 @@ export default function ShoppingList() {
           {items.map((item) => (
             <li key={item.id}>
               <div className="product">
-                <img
-                  className="img-thumbnail"
-                  src={item.img_src}
-                  alt={item.name}
-                ></img>
+                <img className="img-thumbnail" src={item.img_src} alt={item.name}></img>
                 <h2>{item.name.toUpperCase()}</h2>
                 <span>
                   Approx. <h1>${getAvePrice(item.stockInfo).toFixed(2)}</h1>/{item.metric}
@@ -85,7 +82,7 @@ export default function ShoppingList() {
                     onClick={(e) => addItem(e, item.id)}
                   >
                     Add to Cart
-                  </button>
+                </button>
                 </form>
               </div>
             </li>
@@ -100,23 +97,15 @@ export default function ShoppingList() {
             <div className="empty-cart" className="alert alert-info" role="alert">
               Cart is empty.
             </div>
-          ) : (
+            :
             <div>
-              <div
-                className="nonempty-cart"
-                className="alert alert-info"
-                role="alert"
-              >
-                You have {Object.keys(list).length} kind of groceries in the
-                cart.
+              <div className="nonempty-cart" className="alert alert-info" role="alert">
+                You have {Object.keys(list).length} kind of groceries in the cart.
               </div>
               <div className="cart">
                 <ul className="list-group">
-                  {Object.keys(list).map((key, i) => (
-                    <li
-                      key={i}
-                      className="list-group-item d-flex justify-content-between align-items-center"
-                    >
+                  {Object.keys(list).map(key => (
+                    <li className="list-group-item d-flex justify-content-between align-items-center">
                       {key}
                       <span className="badge badge-primary badge-pill">
                         {list[key]}
@@ -127,7 +116,7 @@ export default function ShoppingList() {
                 <button
                   type="submit"
                   className="btn btn-primary"
-                  onClick={handleChange}
+                  onClick={e => submit(e, list)}
                 >
                   Create List
                 </button>
@@ -138,11 +127,13 @@ export default function ShoppingList() {
                 >
                   Clear List
                 </button>
+                
               </div>
             </div>
           }
         </div>
       </div>
+
     </div>
   );
 }
