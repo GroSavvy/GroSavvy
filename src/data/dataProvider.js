@@ -14,6 +14,8 @@ export function DataProvider({ children }) {
   const [items] = useState(itemsRawData);
   const [stores] = useState(storesRawData);
 
+  const [listId, setListId] = useState(0);
+
   const getItemsByKeyWord = (word) =>
     items.filter((item) => item.keyWords.includes(word));
 
@@ -21,14 +23,19 @@ export function DataProvider({ children }) {
     stores.filter((store) => store.brand.includes(name));
 
   const addNewList = (list) => {
-    setMyLists([...myLists, list]);
-    saveJSON("myLists", [...myLists, list]);
+    const date = new Date();
+    setMyLists([...myLists, { list, id: listId, time: date.toGMTString() }]);
+    saveJSON("myLists", [
+      ...myLists,
+      { list, id: listId, time: date.toGMTString() },
+    ]);
+    setListId(listId + 1);
   };
+
   const clearMyLists = () => {
     setMyLists([]);
     clearLocalStorage("myLists");
   };
-
 
   return (
     <DataContext.Provider
