@@ -130,6 +130,7 @@ code {
 
 .store-info {
   float: left;
+  text-align: left;
 }
 .view-details {
   margin-top: 20px;
