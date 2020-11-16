@@ -12,12 +12,12 @@ export default function NavBar() {
   const pathes = ["Home", "Shopping List", "Price Match", "My Lists"];
   return (
     <div>
-      <div class="bd-example">
-        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-              <img class="img-fluid" alt="GroSavvy Background" src="../images/background1.jpg" data-holder-rendered="true" />
-              <div class="carousel-caption">
+      <div className="bd-example">
+        <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
+          <div className="carousel-inner" role="listbox">
+            <div className="carousel-item active">
+              <img className="img-fluid" alt="GroSavvy Background" src="../images/background1.jpg" data-holder-rendered="true" />
+              <div className="carousel-caption">
                 <h1>GroSavvy</h1>
                 <p>ALWAYS LESS FOR MORE</p>
               </div>
