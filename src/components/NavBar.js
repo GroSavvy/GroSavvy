@@ -6,17 +6,26 @@ export default function NavBar() {
 
   const currentPath =
     currentLocation.pathname === "/"
-      ? "home"
+      ? "shoppinglist"
       : currentLocation.pathname.slice(1);
 
-  const pathes = ["Home", "Shopping List", "Price Match", "My Lists"];
+  const pathes = ["Shopping List", "Price Match", "My Lists"];
   return (
     <div>
       <div className="bd-example">
-        <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
+        <div
+          id="carouselExampleCaptions"
+          className="carousel slide"
+          data-ride="carousel"
+        >
           <div className="carousel-inner" role="listbox">
             <div className="carousel-item active">
-              <img className="img-fluid" alt="GroSavvy Background" src="../images/background1.jpg" data-holder-rendered="true" />
+              <img
+                className="img-fluid"
+                alt="GroSavvy Background"
+                src="../images/background1.jpg"
+                data-holder-rendered="true"
+              />
               <div className="carousel-caption">
                 <h1>GroSavvy</h1>
                 <p>ALWAYS LESS FOR MORE</p>
@@ -25,7 +34,6 @@ export default function NavBar() {
           </div>
         </div>
       </div>
-
 
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="collapse navbar-collapse" id="navbarNav">
@@ -54,5 +62,4 @@ export default function NavBar() {
       </nav>
     </div>
   );
-
 }

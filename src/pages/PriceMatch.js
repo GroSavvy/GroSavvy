@@ -47,7 +47,6 @@ export default function PriceMatch() {
             <th>Price</th>
             <th>Store</th>
             <th>DistanceToMac</th>
-            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -57,9 +56,6 @@ export default function PriceMatch() {
                 <th>${stock["price"]}</th>
                 <th>{stock["brand"]}</th>
                 <th>{stock["distanceToMac"]}</th>
-                <th>
-                  <button>View</button>
-                </th>
               </tr>
             );
           })}

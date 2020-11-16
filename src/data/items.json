@@ -5,9 +5,11 @@
     "keyWords": "coke coca cola",
     "metric": "unit",
     "stockInfo": [
-      { "store_id": 1, "price": 3.60 },
-      { "store_id": 2, "price": 3.50 },
-      { "store_id": 3, "price": 3.65 }
+      { "store_id": 1, "price": 3.6 },
+      { "store_id": 2, "price": 3.5 },
+      { "store_id": 3, "price": 3.65 },
+      { "store_id": 4, "price": 4.0 },
+      { "store_id": 5, "price": 3.5 }
     ],
     "img_src": "/images/cola.jpg"
   },
@@ -17,9 +19,10 @@
     "keyWords": "baking potato",
     "metric": "100g",
     "stockInfo": [
-      { "store_id": 1, "price": 0.60 },
-      { "store_id": 2, "price": 0.50 },
-      { "store_id": 3, "price": 1.00 }
+      { "store_id": 1, "price": 0.6 },
+      { "store_id": 2, "price": 0.5 },
+      { "store_id": 3, "price": 1.0 },
+      { "store_id": 4, "price": 0.8 }
     ],
     "img_src": "/images/baking_potato.jpg"
   },
@@ -28,7 +31,13 @@
     "name": "toilet paper",
     "keyWords": "toilet washroom paper towel",
     "metric": "unit",
-    "stockInfo": [{ "store_id": 1, "price": 9.5 }],
+    "stockInfo": [
+      { "store_id": 1, "price": 9.5 },
+      { "store_id": 2, "price": 8.5 },
+      { "store_id": 3, "price": 9.0 },
+      { "store_id": 4, "price": 10.0 },
+      { "store_id": 5, "price": 9.5 }
+    ],
     "img_src": "/images/toilet_paper.jpg"
   },
   {
@@ -36,7 +45,13 @@
     "name": "lays potato chips small",
     "keyWords": "lays potato chips crisp",
     "metric": "unit",
-    "stockInfo": [{ "store_id": 2, "price": 2.0 }],
+    "stockInfo": [
+      { "store_id": 1, "price": 1.5 },
+      { "store_id": 2, "price": 1.5 },
+      { "store_id": 3, "price": 2.0 },
+      { "store_id": 4, "price": 2.5 },
+      { "store_id": 5, "price": 1.0 }
+    ],
     "img_src": "/images/chip.jpg"
   },
   {
@@ -44,7 +59,26 @@
     "name": "strawberry",
     "keyWords": "strawberry fruit",
     "metric": "100g",
-    "stockInfo": [{ "store_id": 3, "price": 2.5 }],
+    "stockInfo": [
+      { "store_id": 1, "price": 1.5 },
+      { "store_id": 2, "price": 1.0 },
+      { "store_id": 3, "price": 1.0 },
+      { "store_id": 4, "price": 1.2 }
+    ],
     "img_src": "/images/strawberry.jpg"
+  },
+  {
+    "id": 6,
+    "name": "2% partly skimmed milk (1L)",
+    "keyWords": "milk skim 2%",
+    "metric": "unit",
+    "stockInfo": [
+      { "store_id": 1, "price": 3.0 },
+      { "store_id": 2, "price": 3.5 },
+      { "store_id": 3, "price": 2.6 },
+      { "store_id": 4, "price": 2.8 },
+      { "store_id": 5, "price": 3.1 }
+    ],
+    "img_src": "/images/partly_skimmed_milk.jpeg"
   }
 ]
