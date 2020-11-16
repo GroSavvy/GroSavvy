@@ -11,13 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-.banner{
-  height: 400px;
-  width: 100%;
-  background-image: url('background.jpg');
-  background-size: cover;
+.bd-example {
+  background-color: cadetblue;
 }
+.carousel-caption h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+  font-size: 100px;
+}
+
+.carousel-caption p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  margin-bottom: 150px;
+}
+
 .content {
   display: flex;
   flex-wrap: wrap;
@@ -25,9 +33,13 @@ code {
 
 .main {
   flex: 3 60rem;
+  border: outset;
+  margin: 1rem;
 }
 .sidebar {
   flex: 1 20rem;
+  border: outset;
+  margin: 1rem;
 }
 
 /* products */
@@ -97,3 +109,30 @@ code {
 .sort-bar {
   width: 10rem;
 }
+
+.brand-name {
+  font-size: 30px;
+  font-weight: bold;
+  float: left;
+}
+
+.total-price {
+  font-size: 40px;
+  float: right;
+}
+
+.media img {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+.store-info {
+  float: left;
+}
+.view-details {
+  margin-top: 20px;
+  float: right;
+}
+
