@@ -21,21 +21,21 @@ export default function ListCompare() {
       <div className="main">
         {stores.map((store) => (
           // return <p>{JSON.stringify(store)}</p>;
-          <div class="card">
-            <div class="card-header">
+          <div className="card">
+            <div className="card-header">
               <span className="brand-name">{store.brand.toUpperCase()}</span>
               <span className="total-price">${store.grandTotal}</span>
             </div>
             <div className="media">
-              <img class="d-flex align-self-start mr-3" src={store.img_src} alt="Store Logo" />
-              <div class="media-body">
-                <div class="card-body">
+              <img className="d-flex align-self-start mr-3" src={store.img_src} alt="Store Logo" />
+              <div className="media-body">
+                <div className="card-body">
                   <span className="store-info">
                     <h4>Distance To McMster: {store.distanceToMac}km</h4>
                     <p>Location: {store.location}</p>
                   </span>
                   <span className="view-details">
-                    <button type="button" class="btn btn-info" onClick={() => handleClick(store.itemsInStore, store.grandTotal)}>View Details</button>
+                    <button type="button" className="btn btn-info" onClick={() => handleClick(store.itemsInStore, store.grandTotal)}>View Details</button>
                   </span>
                 </div>
               </div>
@@ -52,11 +52,11 @@ export default function ListCompare() {
         <div>
         {details.map((item) => (
           <div>
-            <ul class="list-group">
-              <li class="list-group-item d-flex justify-content-between align-items-center text-capitalize">
+            <ul className="list-group">
+              <li className="list-group-item d-flex justify-content-between align-items-center text-capitalize">
                 {item.name}
-                <span class="badge badge-light badge-pill">x{item.count}</span>
-                <span class="badge badge-primary">${item.storePrice}</span>
+                <span className="badge badge-light badge-pill">x{item.count}</span>
+                <span className="badge badge-primary">${item.storePrice}</span>
               </li>
             </ul>
             <div className="alert alert-info">

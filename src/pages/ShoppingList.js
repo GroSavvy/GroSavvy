@@ -101,7 +101,7 @@ export default function ShoppingList() {
       <div className="sidebar">
         <h2>Shopping Cart</h2>
         <div>
-          {Object.keys(list).length == 0 ? (
+          {Object.keys(list).length === 0 ? (
             <div
               className="empty-cart"
               className="alert alert-info"
