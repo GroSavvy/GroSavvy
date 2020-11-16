@@ -124,7 +124,7 @@ export default function ShoppingList() {
                   {Object.keys(list).map((key, i) => (
                     <li
                       key={i}
-                      className="list-group-item d-flex justify-content-between align-items-center"
+                      className="list-group-item d-flex justify-content-between align-items-center text-capitalize"
                     >
                       {key}
                       <span className="badge badge-primary badge-pill">

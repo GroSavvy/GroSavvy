@@ -136,3 +136,7 @@ code {
   float: right;
 }
 
+.total-price-display {
+  float:right;
+  font-size: 30px;
+}

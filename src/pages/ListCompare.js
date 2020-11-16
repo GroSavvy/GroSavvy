@@ -7,9 +7,13 @@ export default function ListCompare() {
   let { id } = useParams();
   const stores = useStoreOfList(id);
   const [details, setDetails] = useState([]);
-  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  const [total, setTotal] = useState(0);
 
 
+  const handleClick = (a, b) => {
+    setDetails(a);
+    setTotal(b);
+  }
   const output = details;
   console.log(output)
   return (
@@ -31,7 +35,7 @@ export default function ListCompare() {
                     <p>Location: {store.location}</p>
                   </span>
                   <span className="view-details">
-                    <button type="button" class="btn btn-info" onClick={e => setDetails(store.itemsInStore)}>View Details</button>
+                    <button type="button" class="btn btn-info" onClick={() => handleClick(store.itemsInStore, store.grandTotal)}>View Details</button>
                   </span>
                 </div>
               </div>
@@ -41,10 +45,15 @@ export default function ListCompare() {
       </div>
 
       <div className="sidebar">
+        <div className="card-header">
+          Shopping List Preview
+        </div>
+      {Object.keys(details).length !== 0 ? (
+        <div>
         {details.map((item) => (
           <div>
             <ul class="list-group">
-              <li class="list-group-item d-flex justify-content-between align-items-center">
+              <li class="list-group-item d-flex justify-content-between align-items-center text-capitalize">
                 {item.name}
                 <span class="badge badge-light badge-pill">x{item.count}</span>
                 <span class="badge badge-primary">${item.storePrice}</span>
@@ -55,7 +64,17 @@ export default function ListCompare() {
             </div>
           </div>
         ))}
-      </div>
+        <div className="total-price-display">
+          Total: ${total}
+        </div>
+        </div>
+      ): (
+        <div className="text-warning">
+          Click View Details to see details.
+        </div>
+      )}
+
+        </div>
     </div>
   );
 }
