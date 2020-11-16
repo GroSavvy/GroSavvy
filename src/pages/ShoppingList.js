@@ -51,18 +51,15 @@ export default function ShoppingList() {
 
   const handleChange = (e) => {
     submit(e, list);
-    navigate(`/mylists`);
+    navigate(`/listcompare/0`);
   };
   return (
     <div className="content">
       <div className="main">
-        {/*  */}
         <SearchBar
           onSearch={(e) => console.log(e)}
           getFilterList={(e) => setfilterList(e)}
         />
-        <div>{JSON.stringify(filterList)}</div>
-        {/*  */}
         <ul className="products">
           {filterList.map((item) => (
             <li key={item.id}>
