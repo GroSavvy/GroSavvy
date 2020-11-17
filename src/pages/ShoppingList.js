@@ -54,7 +54,7 @@ export default function ShoppingList() {
     if (myLists.length === 0) {
       navigate(`/listcompare/0`);
     } else {
-      navigate(`/listcompare/` + `${myLists.slice(-1)[0]["id"] + 1}`);
+      navigate(`/listcompare/${myLists.slice(-1)[0]["id"] + 1}`);
     }
       
   };
