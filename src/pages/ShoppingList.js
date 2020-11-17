@@ -4,8 +4,8 @@ import { useData } from "../data/dataProvider";
 import { useNavigate } from "react-router-dom";
 
 export default function ShoppingList() {
-  const { items, addNewList } = useData();
-  const [list, setList] = useState({});
+  const { items, myLists, addNewList } = useData();
+  const [ list, setList ] = useState({});
   //
   const [filterList, setfilterList] = useState(items);
   //
@@ -51,7 +51,12 @@ export default function ShoppingList() {
 
   const handleChange = (e) => {
     submit(e, list);
-    navigate(`/listcompare/0`);
+    if (myLists.length === 0) {
+      navigate(`/listcompare/0`);
+    } else {
+      navigate(`/listcompare/` + `${myLists.slice(-1)[0]["id"] + 1}`);
+    }
+      
   };
   return (
     <div className="content">
