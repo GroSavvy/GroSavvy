@@ -1,3 +1,11 @@
 Liyang Wang
 
-- 
+- created App's data context
+- created all of the components and hooks under /src/components
+- create PriceMatch & MyLists pages
+
+Kexin Liu
+
+- created most of the app's visual presentation (css)
+- created ListCompare & ShoppingList pages 
+- created example data
