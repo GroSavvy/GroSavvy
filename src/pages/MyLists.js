@@ -8,7 +8,6 @@ export default function MyLists() {
   const handleClick = (a) => {
     setDetails(a);
   };
-  console.log(details);
 
   return (
     <div className="content">
@@ -50,16 +49,20 @@ export default function MyLists() {
         <div className="card-header">Shopping List Preview</div>
         {details.length !== 0 ? (
           <div>
-            {Object.entries(details).map((key, val) => (
-              <div key={key}>
-                <ul className="list-group">
-                  <li className="list-group-item d-flex justify-content-between align-items-center text-capitalize">
-                    {key}
-                    <span className="badge badge-light badge-pill">x{val}</span>
-                  </li>
-                </ul>
-              </div>
-            ))}
+            {Object.entries(details).map(([key, val]) => {
+              return (
+                <div key={key}>
+                  <ul className="list-group">
+                    <li className="list-group-item d-flex justify-content-between align-items-center text-capitalize">
+                      {key}
+                      <span className="badge badge-light badge-pill">
+                        x{val}
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              );
+            })}
           </div>
         ) : (
           <div className="text-warning">Click View Details to see details.</div>
