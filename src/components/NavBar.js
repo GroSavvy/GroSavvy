@@ -23,7 +23,7 @@ export default function NavBar() {
               <img
                 className="img-fluid"
                 alt="GroSavvy Background"
-                src="../images/background1.jpg"
+                src="./images/background1.jpg"
                 data-holder-rendered="true"
               />
               <div className="carousel-caption">

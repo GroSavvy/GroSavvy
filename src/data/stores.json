@@ -4,34 +4,34 @@
     "brand": "fortinos",
     "location": "1579 main street west",
     "distanceToMac": "3.0",
-    "img_src": "/images/fortinos.png"
+    "img_src": "./images/fortinos.png"
   },
   {
     "id": 2,
     "brand": "fortinos",
     "location": "50 dundurn street south unit b",
     "distanceToMac": "2.5",
-    "img_src": "/images/fortinos.png"
+    "img_src": "./images/fortinos.png"
   },
   {
     "id": 3,
     "brand": "foodbasics",
     "location": "845 king street west",
     "distanceToMac": "1.4",
-    "img_src": "/images/foodbasics.png"
+    "img_src": "./images/foodbasics.png"
   },
   {
     "id": 4,
     "brand": "shoppers",
     "location": "1341 main street west",
     "distanceToMac": "0.2",
-    "img_src": "/images/shoppers.png"
+    "img_src": "./images/shoppers.png"
   },
   {
     "id": 5,
     "brand": "shoppers",
     "location": "991 king street west",
     "distanceToMac": "1.5",
-    "img_src": "/images/shoppers.png"
+    "img_src": "./images/shoppers.png"
   }
 ]

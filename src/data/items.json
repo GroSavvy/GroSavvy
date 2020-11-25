@@ -11,7 +11,7 @@
       { "store_id": 4, "price": 4.0 },
       { "store_id": 5, "price": 3.5 }
     ],
-    "img_src": "/images/cola.jpg"
+    "img_src": "./images/cola.jpg"
   },
   {
     "id": 2,
@@ -24,7 +24,7 @@
       { "store_id": 3, "price": 1.0 },
       { "store_id": 4, "price": 0.8 }
     ],
-    "img_src": "/images/baking_potato.jpg"
+    "img_src": "./images/baking_potato.jpg"
   },
   {
     "id": 3,
@@ -38,7 +38,7 @@
       { "store_id": 4, "price": 10.0 },
       { "store_id": 5, "price": 9.5 }
     ],
-    "img_src": "/images/toilet_paper.jpg"
+    "img_src": "./images/toilet_paper.jpg"
   },
   {
     "id": 4,
@@ -52,7 +52,7 @@
       { "store_id": 4, "price": 2.5 },
       { "store_id": 5, "price": 1.0 }
     ],
-    "img_src": "/images/chip.jpg"
+    "img_src": "./images/chip.jpg"
   },
   {
     "id": 5,
@@ -65,7 +65,7 @@
       { "store_id": 3, "price": 1.0 },
       { "store_id": 4, "price": 1.2 }
     ],
-    "img_src": "/images/strawberry.jpg"
+    "img_src": "./images/strawberry.jpg"
   },
   {
     "id": 6,
@@ -79,6 +79,6 @@
       { "store_id": 4, "price": 2.8 },
       { "store_id": 5, "price": 3.1 }
     ],
-    "img_src": "/images/partly_skimmed_milk.jpeg"
+    "img_src": "./images/partly_skimmed_milk.jpeg"
   }
 ]
